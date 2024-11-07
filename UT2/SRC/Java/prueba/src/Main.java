@@ -1,5 +1,25 @@
 import java.util.*;
 public class Main {
+    public static void testGeneral(){
+        System.out.println("Elige el metodo que quieres probar");
+        System.out.println("1.Factorial");
+        System.out.println("2.Suma de nimeros pares");
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        switch (x){
+            case 1:
+                System.out.println("Has elegido la opcion 1:");
+                testFactorial();
+                break;
+            case 2:
+                System.out.println("Has elegido la opcion 2:");
+                testSumaPares();
+                break;
+            default:
+                System.out.println("Opcion no valida");
+                break;
+        }
+    }
     public static int factorial(int x) {
         if (x < 0) {
             throw new ArithmeticException("x<0");
@@ -47,6 +67,6 @@ public class Main {
         }
     }
     public static void main (String[] args){
-        testFactorial();
+        testGeneral();
     }
 }
